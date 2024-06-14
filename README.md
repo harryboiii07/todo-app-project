@@ -1,8 +1,8 @@
-# React + Vite
+## TODO Application
+This project creates a simple **TODO** application. It has the following features :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ - user can signup
+ - user can login
+ - user can create a TODO
+ - user can see their existing TODOS
+ - user can mark the TODO as done
