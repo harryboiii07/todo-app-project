@@ -53,3 +53,7 @@ app.put("/completed",async function(req,res){
     msg : "todo marked as completed"
   })
 })
+
+app.listen(port,()=>{
+  console.log(`app running on port ${port}`);
+})
