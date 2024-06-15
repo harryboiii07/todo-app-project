@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/todos",async function(req,res){
   const createpayload = req.body;
-  const parsedpayload = createpayload.safeParse(createtodoschema);
+  const parsedpayload = createtodoschema.safeParse(createpayload);
   if(!parsedpayload.success){
     res.status(411).json({
       msg : "bad input"
@@ -34,9 +34,9 @@ app.get("/todos",async function(req,res){
   });
 })
 
-app.put("/completed",async function(req,res){
+app.put("/todos",async function(req,res){
   const updatepayload = req.body;
-  const parsedpayload = updatepayload.safeParse(updatetodoschema);
+  const parsedpayload = updatetodoschema.safeParse(updatepayload);
   if(!parsedpayload.success){
     res.status(411).json({
       msg : "bad input"
