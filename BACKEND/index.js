@@ -2,9 +2,12 @@ const express =  require("express");
 const { createtodoschema,updatetodoschema } = require("./types");
 const { todo } = require("./db");
 const app = express();
+const cors = require("cors");
+
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/todos",async function(req,res){
   const createpayload = req.body;
@@ -30,7 +33,7 @@ app.post("/todos",async function(req,res){
 app.get("/todos",async function(req,res){
   const todos = await todo.find({});
   res.json({
-    todos : todos
+    todos
   });
 })
 
